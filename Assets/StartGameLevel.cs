@@ -44,6 +44,8 @@ public class StartGameLevel : MonoBehaviour
          errorMessage.gameObject.SetActive(false);
         
         PlayerPrefs.SetInt("MaximumLimit", int.Parse(selectLimit.options[selectLimit.value].text));
+        PlayerPrefs.SetString("FirstUsename", firstUsername);
+        PlayerPrefs.SetString("SecondUsename", secondUsername);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
