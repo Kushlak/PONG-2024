@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class MenuLevel : MonoBehaviour
 {
-     [SerializeField] private Button startGameButton;
-     [SerializeField] private Button quitGameButton;
+    [SerializeField] private Button startGameButton;
+    [SerializeField] private Button quitGameButton;
+
      void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }
+
+
 
     private void Start()
     {
