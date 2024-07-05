@@ -5,13 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartGameLevel : MonoBehaviour
+public class AIStartGameLevel : MonoBehaviour
 {
 
-    [SerializeField] private Button leaveGameButton;
-    [SerializeField] private Button startGameButton;
+    [SerializeField] private Button leaveAIGameButton;
+    [SerializeField] private Button startAIGameButton;
     [SerializeField] private InputField fisrtUsernameInput;
-    [SerializeField] private InputField secondUsernameInput;
     [SerializeField] private TMP_Dropdown selectLimit;
     [SerializeField] public TextMeshProUGUI errorMessage;
 
@@ -26,19 +25,16 @@ public class StartGameLevel : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        leaveGameButton.onClick.AddListener(BackToMenu);
-        startGameButton.onClick.AddListener(StartGame);
+        leaveAIGameButton.onClick.AddListener(BackToMenu);
+        startAIGameButton.onClick.AddListener(StartAIGame);
 
     }
 
-
-
-    void StartGame()
+    void StartAIGame()
     {
         string firstUsername = fisrtUsernameInput.text;
-        string secondUsername = secondUsernameInput.text;
 
-        if(string.IsNullOrWhiteSpace(firstUsername) || string.IsNullOrWhiteSpace(secondUsername)){
+        if(string.IsNullOrWhiteSpace(firstUsername)){
             errorMessage.gameObject.SetActive(true);
             return;
         }
@@ -46,10 +42,9 @@ public class StartGameLevel : MonoBehaviour
         
         PlayerPrefs.SetInt("MaximumLimit", int.Parse(selectLimit.options[selectLimit.value].text));
         PlayerPrefs.SetString("FirstUsename", firstUsername);
-        PlayerPrefs.SetString("SecondUsename", secondUsername);
+        PlayerPrefs.SetString("SecondUsename", "AI-player");
 
-        SceneManager.LoadScene("SampleScene");
-        
+        SceneManager.LoadScene("AiSampleScene");
     }
-
 }
+    

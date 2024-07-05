@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using TMPro;
 using Unity.Collections;
 using UnityEngine;
+using Unity.UI;
 
 public class History : MonoBehaviour
 {
@@ -47,6 +49,13 @@ public class History : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            UnityEngine.Debug.Log("No file");
+
+        }
+
+        UnityEngine.Debug.Log(records);
         return records;
     }
 
@@ -55,12 +64,16 @@ public class History : MonoBehaviour
         if (records.Count <= 0){
             noRecord.gameObject.SetActive(true);
         }
+        else
+        {
+            noRecord.gameObject.SetActive(false);
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
+        records = ReadFromRecordsFile(@"D:\Results.txt");
         CheckForRecords();
-        ReadFromRecordsFile(@"D:\Results.txt");
         UpdateRecords();
 
     }
