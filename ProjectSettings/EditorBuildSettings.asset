@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/main menu.unity
     guid: 61070f3212e8fba429ce219fa6cbe9ed
   - enabled: 1
+    path: Assets/Scenes/Type choice.unity
+    guid: 5b418b442d726374486be5e419c05da4
+  - enabled: 1
     path: Assets/Scenes/StartGameScene.unity
     guid: 79cc05cda80b3034c9fd5210546ca5e7
   - enabled: 1
@@ -17,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SummaryArterFinish.unity
     guid: ff770ca1ef785df44b7d7e4514fca378
+  - enabled: 1
+    path: Assets/Scenes/AiSampleScene.unity
+    guid: 2560b18a859308c4185b3e0c8fc672e9
+  - enabled: 1
+    path: Assets/Scenes/AIStartGameScene.unity
+    guid: 76ca55b2242f6364b9e8a0a2694723c5
   m_configObjects: {}
