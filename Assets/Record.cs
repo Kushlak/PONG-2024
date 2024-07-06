@@ -21,10 +21,10 @@ public class Record{
             string firstUsername = parts[0];
             string secondUsername = parts[1];
             int firstUserScore = int.Parse(parts[2]);
-            int secindUserScore = int.Parse(parts[3]);
-            return new Record(firstUsername, secondUsername, firstUserScore, secindUserScore);
+            int secondUserScore = int.Parse(parts[3]);
+            return new Record(firstUsername, secondUsername, firstUserScore, secondUserScore);
         }
-        throw new FormatException("Incalid format of record");
+        throw new FormatException("Invalid format of record");
     }
 
     public Record( string firstusername, string secondusername, int scorefirst, int scoresecond){
