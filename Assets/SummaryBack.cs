@@ -19,9 +19,12 @@ public class SummaryBack : MonoBehaviour
 
     static void AppendRecordToFile(string pathName, Record record)
     {
-        using (StreamWriter sw = new StreamWriter(pathName, true))
+        if (record != null)
         {
-            sw.WriteLine(record.ToString());
+            using (StreamWriter sw = new StreamWriter(pathName, true))
+            {
+                sw.WriteLine(record.ToString());
+            }
         }
     }
 

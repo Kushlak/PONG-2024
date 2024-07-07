@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5884695485525755927}
   - component: {fileID: 7264646130448687774}
+  - component: {fileID: 1107260918853096926}
   m_Layer: 5
   m_Name: MatchRecord
   m_TagString: Untagged
@@ -52,6 +53,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userNamesText: {fileID: 5861716018320816201}
   scoresTexts: {fileID: 6067522934388980243}
+--- !u!114 &1107260918853096926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4172902630394703909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 100
+  m_PreferredHeight: 50
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &6218511760931543889
 GameObject:
   m_ObjectHideFlags: 0
