@@ -23,8 +23,8 @@ public class Score : MonoBehaviour
 
     public void SetUsers()
     {
-        leftPlayer.text = PlayerPrefs.GetString("FirstUsename");
-        rightPlayer.text = PlayerPrefs.GetString("SecondUsename");
+        leftPlayer.text = PlayerPrefs.GetString("FirstUsername");
+        rightPlayer.text = PlayerPrefs.GetString("SecondUsername");
     }
 
         public void LeftPlayerGoal()

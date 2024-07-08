@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class SummaryBack : MonoBehaviour
 {
-
     [SerializeField] private Button backToMainMenuButton;
 
     void BackToMainMenu()
@@ -19,7 +18,7 @@ public class SummaryBack : MonoBehaviour
 
     static void AppendRecordToFile(string pathName, Record record)
     {
-        if (record != null)
+        if (record != null && !string.IsNullOrEmpty(record.FirstUserName) && !string.IsNullOrEmpty(record.SecondUserName))
         {
             using (StreamWriter sw = new StreamWriter(pathName, true))
             {
@@ -28,24 +27,33 @@ public class SummaryBack : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+  
     void Start()
     {
         backToMainMenuButton.onClick.AddListener(BackToMainMenu);
-        string firstUsername = PlayerPrefs.GetString("FirstUsename");
-        string secondUsername = PlayerPrefs.GetString("SecondUsename");
+        string firstUsername = PlayerPrefs.GetString("FirstUsername");
+        Debug.Log("FirstUsername");
+        string secondUsername = PlayerPrefs.GetString("SecondUsername");
+        Debug.Log("SecondUsername");
         int firstUserScore = PlayerPrefs.GetInt("FirstUserScore");
+        Debug.Log("FirstUserScore");
         int secondUserScore = PlayerPrefs.GetInt("SecondUserScore");
-        Record newRecord = new Record(firstUsername, secondUsername, firstUserScore, secondUserScore);
-        string pathName = @"D:\Results.txt";
+        Debug.Log("SecondUserScore");
 
-        AppendRecordToFile(pathName, newRecord);
+        // Можна перевірити чи пусті змінні 
+        if (!string.IsNullOrEmpty(firstUsername) && !string.IsNullOrEmpty(secondUsername))
+        {
+            Record newRecord = new Record(firstUsername, secondUsername, firstUserScore, secondUserScore);
+            string pathName = @"D:\Results.txt";
+            AppendRecordToFile(pathName, newRecord);
+        }
+
         PlayerPrefs.DeleteAll();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
     }
 }
+

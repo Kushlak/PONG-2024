@@ -10,7 +10,7 @@ public class AIStartGameLevel : MonoBehaviour
 
     [SerializeField] private Button leaveAIGameButton;
     [SerializeField] private Button startAIGameButton;
-    [SerializeField] private InputField fisrtUsernameInput;
+    [SerializeField] private InputField firstUsernameInput;
     [SerializeField] private TMP_Dropdown selectLimit;
     [SerializeField] public TextMeshProUGUI errorMessage;
 
@@ -32,7 +32,7 @@ public class AIStartGameLevel : MonoBehaviour
 
     void StartAIGame()
     {
-        string firstUsername = fisrtUsernameInput.text;
+        string firstUsername = firstUsernameInput.text;
 
         if(string.IsNullOrWhiteSpace(firstUsername)){
             errorMessage.gameObject.SetActive(true);
@@ -41,8 +41,8 @@ public class AIStartGameLevel : MonoBehaviour
          errorMessage.gameObject.SetActive(false);
         
         PlayerPrefs.SetInt("MaximumLimit", int.Parse(selectLimit.options[selectLimit.value].text));
-        PlayerPrefs.SetString("FirstUsename", firstUsername);
-        PlayerPrefs.SetString("SecondUsename", "AI-player");
+        PlayerPrefs.SetString("FirstUsername", firstUsername);
+        PlayerPrefs.SetString("SecondUsername", "AI-player");
 
         SceneManager.LoadScene("AiSampleScene");
     }

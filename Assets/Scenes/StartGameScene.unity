@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 036ac8ba9434e534db24fbeaf90bfe0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaveGameButton: {fileID: 0}
   startGameButton: {fileID: 0}
-  fisrtUsernameInput: {fileID: 0}
+  firstUsernameInput: {fileID: 0}
   secondUsernameInput: {fileID: 0}
   selectLimit: {fileID: 0}
   errorMessage: {fileID: 0}
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 036ac8ba9434e534db24fbeaf90bfe0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaveGameButton: {fileID: 1025572936}
   startGameButton: {fileID: 930989185}
-  fisrtUsernameInput: {fileID: 1102142184}
+  firstUsernameInput: {fileID: 1102142184}
   secondUsernameInput: {fileID: 175146222}
   selectLimit: {fileID: 1973867991}
   errorMessage: {fileID: 1006698233}
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaveGameButton: {fileID: 0}
   startGameButton: {fileID: 0}
-  fisrtUsernameInput: {fileID: 0}
+  firstUsernameInput: {fileID: 0}
   secondUsernameInput: {fileID: 0}
   selectLimit: {fileID: 0}
   errorMessage: {fileID: 0}
@@ -3134,7 +3134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 036ac8ba9434e534db24fbeaf90bfe0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
